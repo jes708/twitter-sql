@@ -33,6 +33,9 @@
             <p class="by"><a href="/users/{{tweet.name}}">{{tweet.name}}</a></p>
             <p><a href="/tweets/{{tweet.tweet_id}}">{{tweet.content}}</a></p>
           </div>
+          <form action="/delete" method="DELETE">
+            <button id="delete" name="id" value="{{tweet.tweet_id}}">Delete Tweet</button>
+          </form>
         </div>
       {% endfor %}
       </div>

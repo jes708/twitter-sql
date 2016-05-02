@@ -57,3 +57,9 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+#delete{
+  float: right;
+  position: relative;
+  bottom: 50px;
+}

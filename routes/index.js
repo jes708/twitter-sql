@@ -96,6 +96,13 @@ module.exports = function makeRouterWithSockets (io, client) {
     // res.redirect('/');
   });
 
+  router.get('/delete/', function(req, res, next){
+    var sqlQuery = "DELETE FROM tweets WHERE id = '" + req.query.id + "'"
+    client.query(sqlQuery, function (err, result) {
+      res.redirect('/');
+    })  
+  })
+
   // // replaced this hard-coded route with general static routing in app.js
   // router.get('/stylesheets/style.css', function(req, res, next){
   //   res.sendFile('/stylesheets/style.css', { root: __dirname + '/../public/' });
